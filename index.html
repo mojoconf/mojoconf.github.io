@@ -1,0 +1,65 @@
+---
+layout: default
+title: mojoconf 2014
+---
+
+<div class="jumbotron">
+  <h1>{{ page.title }}</h1>
+  <p>
+    Mojolicious training, conference and hackaton.
+  </p>
+  <p>
+    See also
+    <a href="https://twitter.com/search?q=%23mojoconf2014&f=realtime">Twitter</a>
+    (TODO: Fix hashtag),
+    <a href="http://www.meetup.com/">Meetup</a>
+    (TODO: Add meetup link)
+  </p>
+</div>
+
+<div class="row">
+
+  <div class="col-md-3">
+    <h2>When?</h2>
+    <p>Friday, May the 23th, to Sunday, May the 25th, 2014</p>
+    <p>
+      <a class="btn btn-default" href="when.html" role="button">View details</a>
+    </p>
+  </div>
+
+  <div class="col-md-3">
+    <h2>Where?</h2>
+    <p>
+      Y3o, Oslo, Norway
+    </p>
+    <p>
+      <a class="btn btn-default" href="where.html" role="button">View details</a>
+    </p>
+  </div>
+
+  <div class="col-md-3">
+    <h2>How?</h2>
+    <p>
+      …to join?
+    </p>
+    <p>
+      Sign up for the exciting training, the glamourous conference, or
+      sneak into the the restricted-access hackaton <small>(reserved
+      for core contributors)</small>
+    </p>
+    <p>
+      <a class="btn btn-default" href="where.html" role="button">View details</a>
+    </p>
+  </div>
+
+</div>
+
+<div class="row">
+  {% for post in site.posts limit:6 %}
+  <div class="col-md-3">
+    <h2><a href="{{ post.url}}">{{ post.title }}</a></h2>
+    <p>({{ post.date | date_to_string }})</p>
+    <p>{{ post.excerpt }}</p>
+  </div>
+  {% endfor %}
+</div>
